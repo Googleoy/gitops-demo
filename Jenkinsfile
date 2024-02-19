@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DOCKERHUB_USERNAME = "kunchalavikram"
+        DOCKERHUB_USERNAME = "gitya"
         APP_NAME = "gitops-demo-app"
         IMAGE_TAG = "${BUILD_NUMBER}"
         IMAGE_NAME = "${DOCKERHUB_USERNAME}" + "/" + "${APP_NAME}"
@@ -18,7 +18,7 @@ pipeline {
         stage('Checkout SCM'){
             steps {
                 git credentialsId: 'github', 
-                url: 'https://github.com/kunchalavikram1427/gitops-demo.git',
+                url: 'https://github.com/Googleoy/gitops-demo.git',
                 branch: 'dev'
             }
         }
